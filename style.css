@@ -1,0 +1,157 @@
+* {
+margin: 0;
+padding: 0;
+border: 0;
+outline: none;
+box-sizing: border-box;
+background: transparent;
+font-family: inherit;
+}
+a{
+text-decoration: none;
+}
+a img {
+border: none;
+}
+
+button,
+a {
+cursor: pointer;
+color: inherit;
+}
+
+textarea {
+resize: none;
+}
+
+button,
+textarea,
+select {
+appearance: none !important;
+border-radius: 0;
+}
+/*end of css reset*/ 
+
+body{
+    width: 100%;
+    margin: auto;
+    background-color: #ffeedf;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+header{
+    position: relative;
+    width: 100%;
+    height: 60px;
+    font-size: 36px;
+    margin-top: 15px;
+    margin-left: 30px;
+    margin-bottom: 40px;
+    color: #145434;
+}
+
+#spanMenu{
+    position: absolute;
+    font-weight: 700;
+    right: 3%;
+    top: 35%;
+    font-size: 50px;    
+}
+
+#section{
+    border-top: 2px solid #145434;
+}
+
+#flex-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 60px;
+    justify-content: center;
+    align-items: center;
+    margin: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
+}
+
+.flex-item{
+    width: 45%;
+    height: 300px;
+}
+
+.beer{
+    background-color: #145434;
+    height: 300px;
+}
+
+.title{
+    font-size: 36px;
+    font-weight: 400;
+    color: #ffeedf;
+    padding: 40px;
+    border-bottom: 2px solid #ffeedf;
+}
+
+p{
+    font-size: 18px;
+    color: #ffeedf;
+}
+
+.sub{
+    font-weight: 400;
+    margin-left: 40px;
+    margin-top: 60px;
+}
+
+.text{
+    font-weight: 700;
+    margin-left: 40px;
+}
+
+.numcont{
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    border: 2px solid #145434;
+    background-color: #ffeedf;
+    transform: translate(-50%, 30%);
+    font-size: 24px;
+    font-weight: 700;
+    color: #145434;
+    text-align: center;
+    line-height: 150%; 
+}
+
+button{
+    position: relative;
+    /* width: 200px; */
+    width: 37.5%;
+    height: 50px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #145434;
+    background-color: #ffeedf;
+    border: 3px solid #145434;
+    transform: translate(175%, -80%);
+}
+
+button:hover{
+    background-color: #145434;
+    border: 3px solid #ffeedf;
+    color: #ffeedf;
+}
+
+#spanArr{
+    position: absolute;
+    font-size: 36px;
+    right: 2%;
+    top: 10%;
+    font-weight: 700;
+}
+
+@media screen and (max-width: 925px) {
+    .flex-item{
+        width: 50%;
+    }
+}
