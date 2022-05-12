@@ -56,7 +56,6 @@ const beers = {
 	]
 }
 
-
 const htmlBody = () => {
     document.getElementById('root').insertAdjacentHTML("beforeend",
     `<header>
@@ -71,30 +70,33 @@ const htmlBody = () => {
     `)
 
     let num = 1
-    for (const beer of beers.cards) { 
-    document.getElementById('flex-container').insertAdjacentHTML("beforeend", `
-        <div class="flex-item">
-            <div class="numcont">
-                ${num}
-            </div>
-            <div class="beer">
-				<div class="titlediv">
-                	<h1 class="title">${beer.title}</h1>
-				</div> 
-                <p class="sub">${beer.sub}</p> 
-                <p class="text">${beer.text}</p>
-            </div>
-            <button>
-                details
-                <span id="spanArr" class="material-symbols-outlined">
-                    arrow_forward
-                </span>
-            </button>
-        </div>
-        `
-    )
+    beers.cards.map(beer => { 
+		document.getElementById('flex-container').insertAdjacentHTML("beforeend", `
+			<div class="flex-item">
+				<div class="numcont">
+					${num}
+				</div>
+				<div class="beer">
+					<div class="titlediv">
+						<h1 class="title">${beer.title}</h1>
+					</div> 
+					<p class="sub">${beer.sub}</p> 
+					<p class="text">${beer.text}</p>
+				</div>
+				<button>
+					details
+					<span id="spanArr" class="material-symbols-outlined">
+						arrow_forward
+					</span>
+				</button>
+			</div>
+			`
+		)
+	  
     num += 1
-    }
+    })
 }
 
 window.addEventListener("load", htmlBody);
+
+/* (const beer of beers.cards) */
