@@ -78,7 +78,9 @@ const htmlBody = () => {
                 ${num}
             </div>
             <div class="beer">
-                <h1 class="title">${beer.title}</h1> 
+				<div class="titlediv">
+                	<h1 class="title">${beer.title}</h1>
+				</div> 
                 <p class="sub">${beer.sub}</p> 
                 <p class="text">${beer.text}</p>
             </div>

@@ -85,17 +85,26 @@ header{
     height: 300px;
 }
 
+.titlediv{
+    margin-left: 40px;
+    margin-right: 40px;
+    border-bottom: 1px solid #ffeedf;
+}
+
 .title{
+    position: relative;
     font-size: 36px;
     font-weight: 400;
     color: #ffeedf;
-    padding: 40px;
-    border-bottom: 2px solid #ffeedf;
+    transform: translate(0, 110%);
+    margin-bottom: 110px;
 }
 
 p{
+    position: relative;
     font-size: 18px;
     color: #ffeedf;
+    transform: translate(0, -200%);
 }
 
 .sub{
@@ -115,7 +124,7 @@ p{
     border-radius: 20px;
     border: 2px solid #145434;
     background-color: #ffeedf;
-    transform: translate(-50%, 30%);
+    transform: translate(-55%, 50%);
     font-size: 24px;
     font-weight: 700;
     color: #145434;
