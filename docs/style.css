@@ -29,11 +29,11 @@ textarea,
 select {
 appearance: none !important;
 border-radius: 0;
-}
+} 
 /*end of css reset*/ 
 
 body{
-    width: 100%;
+    width: 100%; /* mivel görgethető, ezért nincs height */
     margin: auto;
     background-color: #ffeedf;
     font-family: 'Space Grotesk', sans-serif;
@@ -43,23 +43,26 @@ header{
     position: relative;
     width: 100%;
     height: 60px;
-    font-size: 36px;
-    margin-top: 15px;
-    margin-left: 30px;
-    margin-bottom: 40px;
+}
+
+header .headerTitle{
+    position: absolute;
     color: #145434;
+    font-size: 36px;
+    transform: translate(7%, 15%);
 }
 
 #spanMenu{
     position: absolute;
+    color: #145434;
     font-weight: 700;
-    right: 3%;
-    top: 35%;
-    font-size: 50px;    
+    right: 1%;
+    top: 23%;
+    font-size: 36px;
 }
 
-#section{
-    border-top: 2px solid #145434;
+#lineUnderHeader{
+    border-top: 2px solid #145434; /* vonal a header alatt */
 }
 
 #flex-container{
@@ -67,82 +70,78 @@ header{
     flex-direction: row;
     flex-wrap: wrap;
     gap: 60px;
-    justify-content: center;
-    align-items: center;
-    margin: 60px;
-    margin-left: auto;
-    margin-right: auto;
+    justify-content: center; /* ettől lettek középen a kártyák */
+    align-items: center;     /* ettől lettek középen a kártyák */
+    margin-top: 60px;        
+    margin-bottom: 60px;         
+    margin-left: auto;       /* ez is kell a középre helyezéshez */
+    margin-right: auto;      /* ez is kell a középre helyezéshez */
     max-width: 1200px;
 }
 
-.flex-item{
-    width: 45%;
-    height: 300px;
-}
-
 .beer{
-    background-color: #145434;
-    height: 300px;
-}
-
-.titlediv{
-    margin-left: 40px;
-    margin-right: 40px;
-    border-bottom: 1px solid #ffeedf;
-}
-
-.title{
     position: relative;
+    background-color: #145434;
+    width: 400px;
+    height: 250px;
+}
+
+.beerTitleContainer{ 
+    height: 40%; /* ettől lesz fix nagysága a title-nek és így a p tagek valamint a vonal ugyanott lesz mindig*/
+    margin-left: 40px; 
+    margin-right: 40px; 
+}
+
+.subAndTextContainer{
+    margin-left: 40px; /* ezzel nem megy végig a vonal */
+    margin-right: 40px;
+    border-top: 1px solid #ffeedf; /*ez a vonal*/
+}
+
+.beerTitle{
     font-size: 36px;
     font-weight: 400;
     color: #ffeedf;
-    transform: translate(0, 110%);
-    margin-bottom: 110px;
 }
 
 p{
-    position: relative;
     font-size: 18px;
     color: #ffeedf;
-    transform: translate(0, -200%);
 }
 
 .sub{
     font-weight: 400;
-    margin-left: 40px;
-    margin-top: 60px;
+    margin-top: 3%;
 }
 
 .text{
     font-weight: 700;
-    margin-left: 40px;
 }
 
-.numcont{
+.number{
     width: 40px;
     height: 40px;
     border-radius: 20px;
     border: 2px solid #145434;
     background-color: #ffeedf;
-    transform: translate(-55%, 50%);
+    transform: translate(-55%, -45%);
     font-size: 24px;
     font-weight: 700;
     color: #145434;
-    text-align: center;
-    line-height: 150%; 
+    text-align: center;  /* középen van a szám */
 }
 
 button{
-    position: relative;
+    position: absolute;
     /* width: 200px; */
-    width: 37.5%;
+    width: 200px;
     height: 50px;
     font-size: 14px;
     font-weight: 700;
     color: #145434;
     background-color: #ffeedf;
-    border: 3px solid #145434;
-    transform: translate(175%, -80%);
+    border: 2px solid #145434;
+    transform: translate(104%, -83%);
 }
 
 button:hover{
@@ -159,8 +158,13 @@ button:hover{
     font-weight: 700;
 }
 
-@media screen and (max-width: 925px) {
-    .flex-item{
-        width: 50%;
+@media screen and (max-width: 480px) {
+    .beer{
+        width: 83vw;
+    }
+
+    button{
+        width: 42vw;
+        transform: translate(102%, -83%);
     }
 }

@@ -59,12 +59,12 @@ const beers = {
 const htmlBody = () => {
     document.getElementById('root').insertAdjacentHTML("beforeend",
     `<header>
-        <h1>Best Beers</h1>
+        <h1 class="headerTitle">Best Beers</h1>
         <span id="spanMenu" class="material-symbols-outlined">
             menu
         </span>
     </header>
-    <section id="section">
+    <section id="lineUnderHeader">
         <div id="flex-container"></div>
     </section>
     `)
@@ -73,15 +73,17 @@ const htmlBody = () => {
     beers.cards.map(beer => { 
 		document.getElementById('flex-container').insertAdjacentHTML("beforeend", `
 			<div class="flex-item">
-				<div class="numcont">
-					${num}
-				</div>
 				<div class="beer">
-					<div class="titlediv">
-						<h1 class="title">${beer.title}</h1>
-					</div> 
-					<p class="sub">${beer.sub}</p> 
-					<p class="text">${beer.text}</p>
+					<div class="number">
+						${num}
+					</div>
+					<div class="beerTitleContainer">
+						<h1 class="beerTitle">${beer.title}</h1>
+					</div>
+					<div class="subAndTextContainer">
+						<p class="sub">${beer.sub}</p> 
+						<p class="text">${beer.text}</p>
+					</div>
 				</div>
 				<button>
 					details
@@ -92,11 +94,9 @@ const htmlBody = () => {
 			</div>
 			`
 		)
-	  
+
     num += 1
     })
 }
 
 window.addEventListener("load", htmlBody);
-
-/* (const beer of beers.cards) */
