@@ -62,7 +62,7 @@ header .headerTitle{
 }
 
 #lineUnderHeader{
-    border-top: 2px solid #145434; /* vonal a header alatt */
+    border-top: 1.5px solid #145434; /* vonal a header alatt */
 }
 
 #flex-container{
@@ -160,7 +160,7 @@ button:hover{
 
 @media screen and (max-width: 480px) {
     .beer{
-        width: 83vw;
+        width: 83vw; 
     }
 
     button{
