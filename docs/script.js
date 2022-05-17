@@ -72,9 +72,7 @@ const htmlBody = () => {
 		document.getElementById('flex-container').insertAdjacentHTML("beforeend", `
 			<div class="flex-item">
 				<div class="beer">
-					<div class="number">
-						${num}
-					</div>
+					<div class="number">${num}</div>
 					<div class="beerTitleContainer">
 						<h1 class="beerTitle">${beer.title}</h1>
 					</div>
