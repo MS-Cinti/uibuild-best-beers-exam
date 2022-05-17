@@ -60,13 +60,11 @@ const htmlBody = () => {
     document.getElementById('root').insertAdjacentHTML("beforeend",
     `<header>
         <h1 class="headerTitle">Best Beers</h1>
-        <span id="spanMenu" class="material-symbols-outlined">
+        <button id="spanMenu" class="material-symbols-outlined">
             menu
-        </span>
+        </button>
     </header>
-    <section id="lineUnderHeader">
-        <div id="flex-container"></div>
-    </section>
+    <div id="flex-container"></div>
     `)
 
     let num = 1
@@ -85,7 +83,7 @@ const htmlBody = () => {
 						<p class="text">${beer.text}</p>
 					</div>
 				</div>
-				<button>
+				<button id="details">
 					details
 					<span id="spanArr" class="material-symbols-outlined">
 						arrow_forward

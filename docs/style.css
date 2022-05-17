@@ -40,9 +40,12 @@ body{
 }
 
 header{
-    position: relative;
+    position: fixed;
     width: 100%;
     height: 60px;
+    border-bottom: 1.5px solid #145434;
+    background-color: #ffeedf;
+    z-index: 99;
 }
 
 header .headerTitle{
@@ -61,22 +64,17 @@ header .headerTitle{
     font-size: 36px;
 }
 
-#lineUnderHeader{
-    border-top: 1.5px solid #145434; /* vonal a header alatt */
-}
-
 #flex-container{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 60px;
     justify-content: center; /* ettől lettek középen a kártyák */
-    align-items: center;     /* ettől lettek középen a kártyák */
-    margin-top: 60px;        
-    margin-bottom: 60px;         
-    margin-left: auto;       /* ez is kell a középre helyezéshez */
-    margin-right: auto;      /* ez is kell a középre helyezéshez */
+    align-items: center;     /* ettől lettek középen a kártyák */         
+    margin: 0 auto;         /* ez is kell a középre helyezéshez */
     max-width: 1200px;
+    padding-top: 120px;     /* mivel a header 60px magas, ezért ahhoz hogy a card felett legyen ugyanakkora hely, 120 px */
+    padding-bottom: 120px; /* lent is 120 px magas üres rész van a cardok alatt */
 }
 
 .beer{
@@ -131,9 +129,8 @@ p{
     text-align: center;  /* középen van a szám */
 }
 
-button{
+#details{
     position: absolute;
-    /* width: 200px; */
     width: 200px;
     height: 50px;
     font-size: 14px;
@@ -144,7 +141,7 @@ button{
     transform: translate(104%, -83%);
 }
 
-button:hover{
+#details:hover{
     background-color: #145434;
     border: 3px solid #ffeedf;
     color: #ffeedf;
@@ -163,7 +160,7 @@ button:hover{
         width: 83vw; 
     }
 
-    button{
+    #details{
         width: 42vw;
         transform: translate(102%, -83%);
     }
